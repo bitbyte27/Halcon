@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.0" halcon_version="10.0" cs="1015036694">
+<procedure name="main">
+<interface/>
+<body>
+<c>*  在set_color的算子中，列出Halcon支持的颜色代码，共21种。</c>
+<c>*  Suggested values: 'black', 'white', 'red', 'green', </c>
+<c>*  'blue', 'cyan', 'magenta', 'yellow', 'dim gray', 'gray', </c>
+<c>*  'light gray', 'medium slate blue', 'coral', 'slate blue', </c>
+<c>*  'spring green', 'orange red', 'orange', 'dark olive green', </c>
+<c>*  'pink', 'forest green','cadet blue'</c>
+<c>*  可以用以下的代码来测试颜色</c>
+<l>ColorSet:=[]</l>
+<l>ColorSet[1]:='gray'</l>
+<l>ColorSet[2]:='magenta'</l>
+<l>ColorSet[3]:='dim gray'</l>
+<l>ColorSet[4]:='coral'</l>
+<l>ColorSet[5]:='slate blue'</l>
+<l>ColorSet[6]:='spring green'</l>
+<l>ColorSet[7]:='orange red'</l>
+<l>ColorSet[8]:='cadet blue'</l>
+<l>ColorSet[9]:='light gray'</l>
+<l>ColorSet[10]:='medium slate blue'</l>
+<l>ColorSet[11]:='red'</l>
+<l>ColorSet[12]:='white'</l>
+<l>ColorSet[13]:='green'</l>
+<l>ColorSet[14]:='blue'</l>
+<l>ColorSet[15]:='yellow'</l>
+<l>ColorSet[16]:='pink'</l>
+<l>ColorSet[17]:='orange'</l>
+<l>ColorSet[18]:='cyan'</l>
+<l>ColorSet[19]:='black'</l>
+<l>ColorSet[20]:='dark olive green'</l>
+<l>ColorSet[21]:='forest green'</l>
+<c></c>
+<l>for i:=1 to 21 by 1 </l>
+<l>    dev_update_window('off')</l>
+<l>    dev_close_window()</l>
+<l>    dev_open_window(0,0,300,300,ColorSet[i],WindowHandle)</l>
+<l>    get_system ('operating_system', OS)</l>
+<l>    set_display_font (WindowHandle, 16, 'mono', 'true', 'false')</l>
+<l>    disp_message (WindowHandle, ['The Color is:',ColorSet[i] ], 'window', -1, -1, [ColorSet[i],ColorSet[i]], 'true')</l>
+<l>    wait_seconds(1)  </l>
+<l>endfor  </l>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
