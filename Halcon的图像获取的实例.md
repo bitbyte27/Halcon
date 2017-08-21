@@ -35,8 +35,8 @@ tuple_regexp_select (ImageFiles, ['\\.(tif|tiff|gif|bmp|jpg|jpeg|jp2|png|pcx|pgm
 *'ignore_case'：忽略大小写 <br>
 *'\\.'  --> '.' <br>
 for Index := 0 to |ImageFiles| - 1 by 1 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;read_image (Image4, ImageFiles[Index]) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Do something <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read_image (Image4, ImageFiles[Index]) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Do something <br>
 endfor <br>
 <br>
 
@@ -46,8 +46,8 @@ endfor <br>
 open_framegrabber ('DirectShow', 1, 1, 0, 0, 0, 0, 'default', 8, 'rgb', -1, 'false', 'default', '0', -1, -1, AcqHandle) <br>
 grab_image_start (AcqHandle, -1) <br>
 while (true) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;grab_image_async (Image5, AcqHandle, -1) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Do something <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grab_image_async (Image5, AcqHandle, -1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Do something <br>
 endwhile <br>
 close_framegrabber (AcqHandle)<br>
 <br>
