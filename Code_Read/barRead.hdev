@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.0" halcon_version="10.0" cs="605331925">
+<procedure name="main">
+<interface/>
+<body>
+<l>create_bar_code_model ([], [], BarCodeHandle)</l>
+<l>set_display_font (3600, 16, 'mono', 'true', 'false')</l>
+<l>dev_set_draw ('margin')</l>
+<c></c>
+<l>for i:=989 to 992 by 1</l>
+<c></c>
+<l>read_image (Image,'F:/Halcon test/barcode/C0_'+i+'.bmp')</l>
+<l>dev_resize_window_fit_image (Image, 0, 0, -1, -1)</l>
+<l>gen_rectangle1 (Rectangle, 11, 95, 463, 566)</l>
+<c></c>
+<l>reduce_domain (Image, Rectangle, ImageReduced)</l>
+<l>mean_image (ImageReduced, ImageMean, 15, 15)</l>
+<l>threshold (ImageMean, Region, 40, 255)</l>
+<l>connection (Region, ConnectedRegions)</l>
+<l>select_shape_std (ConnectedRegions, SelectedRegions, 'max_area', 70)</l>
+<l>shape_trans (SelectedRegions, RegionTrans, 'rectangle2')</l>
+<l>orientation_region (RegionTrans, Phi)</l>
+<l>Angle:=-deg(Phi)</l>
+<l>rotate_image (Image, ImageRotate, Angle, 'constant')</l>
+<l>mean_image (ImageRotate, ImageMean1, 3, 15)</l>
+<l>invert_image (ImageMean1, ImageInvert)</l>
+<l>*  read_image (Image2, 'D:/bar/4.gif')</l>
+<l>*     draw_rectangle1 (3600, Row1, Column1, Row2, Column2)</l>
+<l>*     gen_rectangle1 (Rectangle1, Row1, Column1, Row2, Column2)</l>
+<l>*     reduce_domain (Image2, Rectangle1, ImageReduced1)</l>
+<c>   </c>
+<l>find_bar_code (ImageInvert, SymbolRegions, BarCodeHandle, 'auto', DecodedDataStrings)</l>
+<l>get_bar_code_result (BarCodeHandle, 0, 'decoded_strings', BarCodeResults)</l>
+<l>disp_message (3600, DecodedDataStrings, 'image', 100, 100, 'black', 'true')</l>
+<l>stop()</l>
+<l>endfor</l>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
