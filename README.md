@@ -8,3 +8,6 @@ Halcon of Machine Vision
 ## 一个已授权的发明专利
 《一种基于机器视觉的图书查询、定位系统及方法》<br>
 http://ooou6mjma.bkt.clouddn.com/CN201410092622HYJ.pdf
+
+## 机器视觉知识体系
+http://ooou6mjma.bkt.clouddn.com/MachineVision.pdf
