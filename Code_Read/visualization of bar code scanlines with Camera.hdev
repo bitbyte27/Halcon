@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.0" halcon_version="10.0" cs="-921842124">
+<procedure name="main">
+<interface/>
+<body>
+<c>* </c>
+<c>* This program demonstrates visualization of bar code scanlines.</c>
+<c>* 这个程序演示了可视化的条码扫描线.</c>
+<c>* This visualization can be used to inspect the quality of images, where</c>
+<c>* occlusions or print defects might prevent the bar code reader from</c>
+<c>* successfully decoding the underlying bar code.</c>
+<c>* 这种可视化可用于检查图像的质量，其中封闭遮断或打印缺陷可能会阻止条形码阅读器成功解码潜在的条码。</c>
+<c>* With 'scanlines_all' all scanlines that the bar code reader would</c>
+<c>* eventually use to decode a  candidate bar code (here, colored in red).</c>
+<c>* 'scanlines_all'用于显示标识最终的解码潜在条码的扫面线（红色部分）</c>
+<c>* With 'scanlines_valid' are visualized all scanlines that can be decoded</c>
+<c>* as well (here, colored in green)</c>
+<c>* 'scanlines_valid'用于显示标识有效解码的扫描线</c>
+<c>* 'candidate_regions'用于获取条码潜在区域</c>
+<l>dev_close_window ()</l>
+<l>dev_open_window (0, 0, 500, 500, 'black', WindowHandle)</l>
+<l>set_display_font (WindowHandle, 16, 'mono', 'true', 'false')</l>
+<l>dev_set_draw ('margin')</l>
+<l>dev_update_window ('off')</l>
+<l>dev_set_line_width (2)</l>
+<l>open_framegrabber ('DirectShow', 1, 1, 0, 0, 0, 0, 'default', 8, 'rgb', -1, 'false', 'default', 'Gsou USB2.0 Camera', 0, -1, AcqHandle)</l>
+<l>grab_image_start (AcqHandle, -1)</l>
+<l>while (true)</l>
+<l>create_bar_code_model ([], [], BarCodeHandle)</l>
+<l>set_bar_code_param (BarCodeHandle, 'element_size_min', 1.5)</l>
+<c>*这个参数是指条码的条（黑线）和空（空白间隔）的最小宽度，对于尺寸很大的条码，这个最小值element_size_min</c>
+<c>*要相应增加，比如一个较大的条码图片，用1.5可能就读不到，因为条和空的宽度很大，用2或2.5以上就可以解码，</c>
+<c>*但数值越大，解码的时间就越长。还有一个element_size_max的参数，和这个相反，属于限制最大宽度，宽度不能太大，</c>
+<c>*不然相邻的条和空就会被识别成一个了。一般这两个可以一起用</c>
+<l>    grab_image_async (Image, AcqHandle, -1)</l>
+<l>set_bar_code_param (BarCodeHandle, 'persistence', 1)</l>
+<c>* persistence这个参数没有查到，暂未知</c>
+<l>    get_image_size (Image, Width, Height)</l>
+<l>    dev_set_window_extents (0, 0, Width, Height)</l>
+<l>    dev_display (Image)</l>
+<c>    * </c>
+<l>    find_bar_code (Image, SymbolRegions, BarCodeHandle, 'Code 128', DecodedDataStrings)</l>
+<c>    * 寻找条码，并获取解码值。</c>
+<l>    get_bar_code_object (Candidates, BarCodeHandle, 'all', 'candidate_regions')</l>
+<l>    dev_set_color ('magenta')</l>
+<l>    dev_display (Candidates)</l>
+<c>    * 获取条码的扫描线候选区域。</c>
+<l>    get_bar_code_object (AllScanlines, BarCodeHandle, 'all', 'scanlines_all')</l>
+<l>    dev_set_color ('red')</l>
+<l>    dev_display (AllScanlines)</l>
+<c>    * 获取所有的扫描线（扫描线应该是指在一定的高度内读取到的条和空的边缘形成的线），这个读取不论是否能解码，均读取显示。</c>
+<l>    get_bar_code_object (ValidScanlines, BarCodeHandle, 'all', 'scanlines_valid')</l>
+<l>    dev_set_color ('green')</l>
+<l>    dev_display (ValidScanlines)</l>
+<c>    * 获取有效的条码扫描线</c>
+<l>    if (|DecodedDataStrings|&gt;0)</l>
+<l>        disp_message (WindowHandle, DecodedDataStrings, 'window', 12, 12, 'black', 'true')</l>
+<l>        disp_continue_message (WindowHandle, 'black', 'true')</l>
+<l>        stop ()</l>
+<l>    endif</l>
+<c>    * if语句，当读到了数值就停下来。</c>
+<c></c>
+<l>clear_bar_code_model (BarCodeHandle)</l>
+<l>endwhile</l>
+<l>close_framegrabber (AcqHandle)</l>
+<c>*关闭帧接收器（摄像头）</c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

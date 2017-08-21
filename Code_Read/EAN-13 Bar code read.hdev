@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.0" halcon_version="10.0" cs="245141933">
+<procedure name="main">
+<interface/>
+<body>
+<c>* Read bar codes of type EAN-13</c>
+<c>* </c>
+<l>create_bar_code_model ([], [], BarCodeHandle)</l>
+<l>dev_close_window ()</l>
+<l>dev_open_window (0, 0, 300, 300, 'black', WindowHandle)</l>
+<l>set_display_font (WindowHandle, 16, 'mono', 'true', 'false')</l>
+<l>dev_set_color ('green')</l>
+<l>dev_set_draw ('margin')</l>
+<l>dev_set_line_width (3)</l>
+<l>set_bar_code_param (BarCodeHandle, 'element_size_min', 1.5)</l>
+<l>set_bar_code_param (BarCodeHandle, 'element_size_max', 16)</l>
+<l>for I := 1 to 5 by 1</l>
+<l>    read_image (Image,'F:/Halcon test/barcode/image/'+I+'.png')</l>
+<c>    * 注意修改图片路径</c>
+<l>    dev_resize_window_fit_image (Image, 0, 0, -1, -1)</l>
+<l>    find_bar_code (Image, SymbolRegions, BarCodeHandle, 'EAN-13', DecodedDataStrings)</l>
+<l>    area_center (SymbolRegions, Area, Row, Column)</l>
+<l>    dev_display (Image)</l>
+<l>    dev_display (SymbolRegions)</l>
+<l>    disp_message (WindowHandle, DecodedDataStrings, 'image', Row-30, Column-90, 'black', 'true')</l>
+<l>    disp_continue_message (WindowHandle, 'black', 'true')</l>
+<l>    stop ()</l>
+<l>endfor</l>
+<l>clear_bar_code_model (BarCodeHandle)</l>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
