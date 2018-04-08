@@ -1,5 +1,7 @@
 # Halcon
 Halcon of Machine Vision
+<br>
+[iHalcon论坛](http://www.ihalcon.com)
 <br><br>
 
 ## 几个实例解析
