@@ -4,6 +4,9 @@ Halcon of Machine Vision
 [iHalcon论坛](http://www.ihalcon.com)
 <br><br>
 
+## 一些代码片段
+[01、Halcon的图像获取的实例](https://github.com/bitbyte27/Halcon/blob/master/Halcon%E7%9A%84%E5%9B%BE%E5%83%8F%E8%8E%B7%E5%8F%96%E7%9A%84%E5%AE%9E%E4%BE%8B.md)
+
 ## 几个实例解析
 [01、一个用摄像头获取条形码并显示类型及解码的实例及每个步骤注解](一个用摄像头获取条形码并显示类型及解码的实例及每个步骤注解.md)<br>
 [02、一个摄像头解码二维码的实例及分步骤注解](一个摄像头解码二维码的实例及分步骤注解.md)<br>
