@@ -20,8 +20,8 @@
 > imagepath[3]:='F:/Halcon test/barcode/image/5.png'
 > * 读取4张图片的路径
 > 
-> for i:=0 to 3 by 1
->     read_image(image2,imagepath[i])
+> for i:=0 to 3 by 1<br>
+>     read_image(image2,imagepath[i])<br>
 > endfor
 
 *=================分割线3================== 
