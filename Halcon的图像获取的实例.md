@@ -1,26 +1,28 @@
 ## Halcon的图像获取的实例
 
-* 重新整理之前旧网站上发布过的帖子。 
-* 比较常用的几个图像获取的例子，之前刚刚学习halcon的时候写的，作为入门的第一步，还是值得再分享一下的。 
+* 重新整理之前旧网站上发布过的帖子。
+* 比较常用的几个图像获取的例子，之前刚刚学习halcon的时候写的，作为入门的第一步，还是值得再分享一下的。
 
-### 图像获取的基本代码（1） 
+### 图像获取的基本代码（1）
 > * 读取路径下的图片,image1
 > 
-> read_image(image1,'F:/Halcon test/barcode/image/1.png') 
+> read_image(image1,'F:/Halcon test/barcode/image/1.png')
 
-### 图像获取的基本代码（2） 
-> * 读取路径下的多张图片,image2 
-> imagepath :=[] 
-> * 建立一个图像读取的数组，命名为imagepath。 
+### 图像获取的基本代码（2）
+> * 读取路径下的多张图片,image2
 > 
-> imagepath[0]:='F:/Halcon test/barcode/image/2.png' 
-> imagepath[1]:='F:/Halcon test/barcode/image/3.png' 
-> imagepath[2]:='F:/Halcon test/barcode/image/4.png' 
-> imagepath[3]:='F:/Halcon test/barcode/image/5.png' 
-> * 读取4张图片的路径 
-> for i:=0 to 3 by 1 
->     read_image(image2,imagepath[i]) 
-> endfor 
+> imagepath :=[]
+> * 建立一个图像读取的数组，命名为imagepath。
+> 
+> imagepath[0]:='F:/Halcon test/barcode/image/2.png'
+> imagepath[1]:='F:/Halcon test/barcode/image/3.png'
+> imagepath[2]:='F:/Halcon test/barcode/image/4.png'
+> imagepath[3]:='F:/Halcon test/barcode/image/5.png'
+> * 读取4张图片的路径
+> 
+> for i:=0 to 3 by 1
+>     read_image(image2,imagepath[i])
+> endfor
 
 *=================分割线3================== 
 *图像获取的基本代码（3） 
