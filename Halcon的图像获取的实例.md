@@ -24,7 +24,9 @@
 > * 读取4张图片的路径
 > 
 >  for i:=0 to 3 by 1
->     read_image(image2,imagepath[i])
+> 
+>  read_image(image2,imagepath[i])
+> 
 >  endfor
 > 
 
@@ -33,7 +35,7 @@
 > 
 > for i:=1 to 5 by 1
 > 
->     read_image(image3,'F:/Halcon test/barcode/image/'+i+'.png') 
+> read_image(image3,'F:/Halcon test/barcode/image/'+i+'.png') 
 > 
 > endfor 
 
