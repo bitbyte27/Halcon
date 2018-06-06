@@ -15,21 +15,28 @@
 > * 建立一个图像读取的数组，命名为imagepath。
 > 
 > imagepath[0]:='F:/Halcon test/barcode/image/2.png'
+> 
 > imagepath[1]:='F:/Halcon test/barcode/image/3.png'
+> 
 > imagepath[2]:='F:/Halcon test/barcode/image/4.png'
+> 
 > imagepath[3]:='F:/Halcon test/barcode/image/5.png'
 > * 读取4张图片的路径
 > 
-> for i:=0 to 3 by 1<br>
->     read_image(image2,imagepath[i])<br>
+> for i:=0 to 3 by 1
+> 
+>     read_image(image2,imagepath[i])
+> 
 > endfor
 
-*=================分割线3================== 
-*图像获取的基本代码（3） 
-*读取文件夹下的某些图片,image3 
-for i:=1 to 5 by 1 
-    read_image(image3,'F:/Halcon test/barcode/image/'+i+'.png') 
-endfor 
+### 图像获取的基本代码（3）
+> * 读取文件夹下的某些图片,image3
+> 
+> for i:=1 to 5 by 1
+> 
+>     read_image(image3,'F:/Halcon test/barcode/image/'+i+'.png') 
+> 
+> endfor 
 
 
 *=================分割线4================== 
