@@ -10,7 +10,7 @@
 *  'spring green', 'orange red', 'orange', 'dark olive green',
 *  'pink', 'forest green','cadet blue'
 *  可以用以下的代码来测试颜色
-
+<pre name="code" class="halcon"> 
 ColorSet:=[]
 ColorSet[1]:='gray'
 ColorSet[2]:='magenta'
@@ -33,8 +33,9 @@ ColorSet[18]:='cyan'
 ColorSet[19]:='black'
 ColorSet[20]:='dark olive green'
 ColorSet[21]:='forest green'
+</pre>
 
-<pre name="code" class="c++"> 
+<pre name="code" class="halcon"> 
 for i:=1 to 21 by 1   
     dev_update_window('off')   
     dev_close_window()   
