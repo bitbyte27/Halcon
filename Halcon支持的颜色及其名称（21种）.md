@@ -10,6 +10,7 @@
 *  'spring green', 'orange red', 'orange', 'dark olive green',
 *  'pink', 'forest green','cadet blue'
 *  可以用以下的代码来测试颜色
+
 <pre name="code" class="halcon"> 
 ColorSet:=[]
 ColorSet[1]:='gray'
