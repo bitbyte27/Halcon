@@ -1,7 +1,7 @@
 ## Halcon支持的颜色及其名称，共21种
 
-* [Halcon支持的颜色及其名称，共21种](https://blog.csdn.net/bitezijie/article/details/8858541)
-* [Halcon编程的语句颜色区分](https://blog.csdn.net/bitezijie/article/details/8858389)
+> [Halcon支持的颜色及其名称，共21种](https://blog.csdn.net/bitezijie/article/details/8858541)
+> [Halcon编程的语句颜色区分](https://blog.csdn.net/bitezijie/article/details/8858389)
 
 *  在set_color的算子中，列出Halcon支持的颜色代码，共21种。   
 *  Suggested values: 'black', 'white', 'red', 'green',   
@@ -32,7 +32,7 @@ ColorSet[18]:='cyan'
 ColorSet[19]:='black'   
 ColorSet[20]:='dark olive green'   
 ColorSet[21]:='forest green'   
-  
+<pre name="code" class="c++"> 
 for i:=1 to 21 by 1   
     dev_update_window('off')   
     dev_close_window()   
@@ -42,3 +42,4 @@ for i:=1 to 21 by 1
     disp_message (WindowHandle, ['The Color is:',ColorSet[i], 'window', -1, -1, [ColorSet,ColorSet], 'true')   
     wait_seconds(1)     
 endfor
+</pre>
