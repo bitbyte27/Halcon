@@ -11,7 +11,7 @@
 *  'pink', 'forest green','cadet blue'
 *  可以用以下的代码来测试颜色
 
-<code>
+<pre name="code" class="halcon">
 ColorSet:=[]
 ColorSet[1]:='gray'
 ColorSet[2]:='magenta'
@@ -34,16 +34,16 @@ ColorSet[18]:='cyan'
 ColorSet[19]:='black'
 ColorSet[20]:='dark olive green'
 ColorSet[21]:='forest green'
-</code>
+</pre>
 
-<pre name="code" class="halcon"> 
-for i:=1 to 21 by 1   
-    dev_update_window('off')   
-    dev_close_window()   
-    dev_open_window(0,0,300,300,ColorSet[i],WindowHandle)   
-    get_system ('operating_system', OS)   
-    set_display_font (WindowHandle, 16, 'mono', 'true', 'false')   
-    disp_message (WindowHandle, ['The Color is:',ColorSet[i], 'window', -1, -1, [ColorSet,ColorSet], 'true')   
-    wait_seconds(1)     
+<pre name="code" class="halcon">
+for i:=1 to 21 by 1
+    dev_update_window('off')
+    dev_close_window()
+    dev_open_window(0,0,300,300,ColorSet[i],WindowHandle)
+    get_system ('operating_system', OS)
+    set_display_font (WindowHandle, 16, 'mono', 'true', 'false')
+    disp_message (WindowHandle, ['The Color is:',ColorSet[i], 'window', -1, -1, [ColorSet,ColorSet], 'true')
+    wait_seconds(1)
 endfor
 </pre>
