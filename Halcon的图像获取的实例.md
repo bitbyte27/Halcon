@@ -4,8 +4,10 @@
 * 比较常用的几个图像获取的例子，之前刚刚学习halcon的时候写的，作为入门的第一步，还是值得再分享一下的。
 
 ### 图像获取的基本代码（1）
+<pre name="code" class="halcon">
 * 读取路径下的图片,image1
-<code>read_image(image1,'F:/Halcon test/barcode/image/1.png')</code>
+read_image(image1,'F:/Halcon test/barcode/image/1.png')
+</pre>
 
 ### 图像获取的基本代码（2）
 > * 读取路径下的多张图片,image2
