@@ -1,6 +1,7 @@
 ## Halcon支持的颜色及其名称，共21种
-[Halcon支持的颜色及其名称，共21种](https://blog.csdn.net/bitezijie/article/details/8858541)
-[Halcon编程的语句颜色区分](https://blog.csdn.net/bitezijie/article/details/8858389)
+
+* [Halcon支持的颜色及其名称，共21种](https://blog.csdn.net/bitezijie/article/details/8858541)
+* [Halcon编程的语句颜色区分](https://blog.csdn.net/bitezijie/article/details/8858389)
 
 *  在set_color的算子中，列出Halcon支持的颜色代码，共21种。   
 *  Suggested values: 'black', 'white', 'red', 'green',   
