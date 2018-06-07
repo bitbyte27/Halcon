@@ -5,7 +5,8 @@ Halcon of Machine Vision
 <br><br>
 
 ## 一些代码片段
-[01、Halcon的图像获取的实例](https://github.com/bitbyte27/Halcon/blob/master/Halcon%E7%9A%84%E5%9B%BE%E5%83%8F%E8%8E%B7%E5%8F%96%E7%9A%84%E5%AE%9E%E4%BE%8B.md)
+[01、Halcon的图像获取的实例](https://github.com/bitbyte27/Halcon/blob/master/Halcon%E7%9A%84%E5%9B%BE%E5%83%8F%E8%8E%B7%E5%8F%96%E7%9A%84%E5%AE%9E%E4%BE%8B.md)<br>
+[02、Halcon支持的颜色及其名称，共21种](https://github.com/bitbyte27/Halcon/blob/master/Halcon%E6%94%AF%E6%8C%81%E7%9A%84%E9%A2%9C%E8%89%B2%E5%8F%8A%E5%85%B6%E5%90%8D%E7%A7%B0%EF%BC%8821%E7%A7%8D%EF%BC%89.md)
 
 ## 几个实例解析
 [01、一个用摄像头获取条形码并显示类型及解码的实例及每个步骤注解](一个用摄像头获取条形码并显示类型及解码的实例及每个步骤注解.md)<br>
