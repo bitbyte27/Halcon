@@ -5,7 +5,7 @@
 
 ### 图像获取的基本代码（1）
 <pre name="code" class="halcon">
-* 读取路径下的图片,image1
+*读取路径下的图片,image1
 read_image(image1,'F:/Halcon test/barcode/image/1.png')
 </pre>
 
