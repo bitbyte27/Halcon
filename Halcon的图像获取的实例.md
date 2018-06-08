@@ -2,6 +2,7 @@
 
 * 重新整理之前旧网站上发布过的帖子。
 * 比较常用的几个图像获取的例子，之前刚刚学习halcon的时候写的，作为入门的第一步，还是值得再分享一下的。
+> [Halcon的图像获取的实例](https://blog.csdn.net/bitezijie/article/details/24126275)
 
 ### 图像获取的基本代码（1）
 <pre name="code" class="halcon">
