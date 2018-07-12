@@ -48,3 +48,5 @@ close_framegrabber (AcqHandle)
 ![jpg](2D.jpg)
 
 * 二维码的网址：http://ma.m.taobao.com/buvjx
+
+> [Halcon机器视觉二维码实例及分步注解](https://blog.csdn.net/bitezijie/article/details/24786997)
