@@ -15,7 +15,9 @@ Halcon of Machine Vision
 [02、一个摄像头解码二维码的实例及分步骤注解](一个摄像头解码二维码的实例及分步骤注解.md)<br>
 [03、一段可视化的条码扫描线的实例和注解](一段可视化的条码扫描线的实例和注解.md)<br>
 [04、Halcon机器视觉二维码实例及分步注解](Halcon机器视觉二维码实例及分步注解.md)<br>
-[05、RGB图像中三个通道的每个灰度值的像素个数](RGB/RGB图像中三个通道的每个灰度值的像素个数.md)
+[05、RGB图像中三个通道的每个灰度值的像素个数](RGB/RGB图像中三个通道的每个灰度值的像素个数.md)<br>
+[06、Visual Studio 与 Halcon](VisualStudio/README.md)
+
 #### 实例解析合集
 [My hdev Example](http://ooou6mjma.bkt.clouddn.com/MyhdevExample.pdf)
 <br><br>
