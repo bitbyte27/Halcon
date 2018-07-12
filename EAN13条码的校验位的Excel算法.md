@@ -14,3 +14,5 @@
 最简公式：
 单元格=RIGHT(SUM(LEFT($B3,{0,1}+{1;3;5;7;9;11})*{9,7}))
 </pre>
+
+> [EAN13条码的校验位的Excel算法](https://blog.csdn.net/bitezijie/article/details/24318969)
