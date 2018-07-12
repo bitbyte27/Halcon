@@ -27,9 +27,11 @@ stop()
 </pre>
 
 ![jpg](rgb2.jpg)
+
 * 区域的像素灰度值平均值 
 
 ![jpg](rgb3.jpg)
-AbsoluteHisto变量的部分像素数量。
+
+* AbsoluteHisto变量的部分像素数量。
 
 > [RGB图像中三个通道的每个灰度值的像素个数](https://blog.csdn.net/bitezijie/article/details/24128953)
