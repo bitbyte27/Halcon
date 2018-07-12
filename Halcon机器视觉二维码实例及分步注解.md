@@ -32,9 +32,9 @@ while (true)
         get_string_extents (WindowHandle, DecodedDataStrings[i], Ascent, Descent, TxtWidth, TxtHeight)
         disp_message (WindowHandle, DecodedDataStrings[i], 'image', max(Row-50), max([min(Col+30)-TxtWidth/2,1]), 'black', 'true')
       endfor
-      *这段for循环语句的目的是让解码到的字符串（二维码的内容）显示到二维码深绿色（forest green上面定义）的解码区域框的行列位置。
-      *disp_message (WindowHandle, DecodedDataStrings, 'window', 12, 12, 'black', 'true')
-      *如果不需要设置显示到区域框中间的位置，而是显示到窗体的上方或其他位置，那么不需要上面那段for语句，只需这段信息显示的语句即可显示到窗体相应位置。
+      * 这段for循环语句的目的是让解码到的字符串（二维码的内容）显示到二维码深绿色（forest green上面定义）的解码区域框的行列位置。
+      * disp_message (WindowHandle, DecodedDataStrings, 'window', 12, 12, 'black', 'true')
+      * 如果不需要设置显示到区域框中间的位置，而是显示到窗体的上方或其他位置，那么不需要上面那段for语句，只需这段信息显示的语句即可显示到窗体相应位置。
          if (|DecodedDataStrings|&gt;0)  
              disp_continue_message (WindowHandle, 'black', 'true')  
              stop()
@@ -44,3 +44,7 @@ while (true)
 endwhile
 close_framegrabber (AcqHandle)
 </pre>
+
+![jpg](2D.jpg)
+
+* 二维码的网址：http://ma.m.taobao.com/buvjx
